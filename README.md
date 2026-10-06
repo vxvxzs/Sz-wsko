@@ -29,19 +29,29 @@ Można również otworzyć index.html bezpośrednio w przeglądarce. Pełny podg
 ## Edycja
 
 - Teksty i telefon: index.html. Numer jest też w opisie strony w sekcji head.
-- Kolory i układ: styles.css.
+- Kolory i układ bazowy: styles.css; aktualna kompozycja, typografia i responsywność: art-integration.css.
 - Przełączanie modeli oraz galerie: app.js.
 - Zdjęcia: assets/. Przy wymianie aktualizuj odpowiednie wpisy w HTML i app.js.
 - Fonty: Anton oraz Manrope; licencje w katalogu licenses/.
 
-## Weryfikacja
+## Weryfikacja po poprawkach klienta
 
-Sprawdzono renderowanie dla szerokości 320, 360, 390, 768, 1024 i 1440 px: bez poziomego przewijania, błędów JavaScript i brakujących zdjęć. Sprawdzono powiększenie tekstu do 200% na komputerze, menu mobilne, trzy modele, galerie, strzałki klawiatury, Escape i linki telefoniczne. To testy w przeglądarce z symulowanymi szerokościami ekranu; nie są pomiarem wydajności na fizycznym telefonie ani weryfikacją wdrożenia Vercel.
+Sprawdzono w przeglądarce szerokości 320, 360, 390, 760, 768, 1024 i 1440 px: bez poziomego przewijania i elementów wychodzących poza ekran. Obejrzano header, hero, Izę, Różę Max, quady, pakiet i paintball. Sprawdzono menu mobilne, przełączanie modeli, galerie, kolejne zdjęcie, zamykanie przez Escape, linki telefoniczne i mailto oraz istnienie wszystkich celów nawigacji i lokalnych plików. Brak zgłoszonych błędów w konsoli podczas kontroli. Są to testy w przeglądarce, nie pomiar na fizycznym telefonie ani weryfikacja publikacji Vercel.
 
-## Materiały i redakcja
+## Aktualne materiały
 
-13 wybranych zdjęć z materiałów klienta. Oryginały pozostały bez zmian. Dodatkowe kopie rozmiarów ograniczają transfer na telefonie. Galeria paintballa ma sześć zdjęć; modele odpowiadają podpisanym plikom klienta.
+Główne grafiki ofertowe pochodzą z materiałów klienta. Plakat paintballa korzysta z wcześniej poprawionej wersji z napisem „Szówsko”. Prawdziwe zdjęcia pozostają w sekcjach i galeriach. Cztery modele: Jacek, Róża, Iza i osobna Róża Max z nowego załącznika. Zdjęcia modeli są wyświetlane w całości bez przycinania. Grafiki i zdjęcia mają lokalne, zoptymalizowane wersje WebP.
 
-Usunięto rozbudowane hasła marketingowe, absolutne obietnice bezpieczeństwa i twierdzenia o certyfikatach UDT, których dokumentów nie otrzymano. Zachowano producenta placów zabaw, indywidualny transport i montaż, dodatki Róży, quady dwuosobowe, kaski, szkolenie, pakiet rodzinny, strzelanie do celów oraz mobilną strzelnicę w całej Polsce od 5. roku życia.
+Strzelnica ma wyłącznie tarcze statyczne. Przejażdżki: Szówsko, Radawa i okolice Jarosławia. Pakiet obejmuje quady, strzelnicę i ognisko podczas jednego wyjazdu. Kontakt: tel. 886 179 875 oraz jacor_jto@interia.pl.
 
-Poprawiony plakat paintballowy jest osobnym plikiem obok projektu. Nie jest ładowany przez stronę; galeria prezentuje rzeczywiste zdjęcia.
+## Wgranie poprawionej wersji
+
+Paczka strona-szowsko-poprawki.zip zawiera index.html bezpośrednio w głównym katalogu oraz foldery assets/ i licenses/. Zachowaj te foldery przy wgrywaniu do repozytorium. Podmień zawartość projektu plikami z paczki, w tym index.html, styles.css, art-integration.css, app.js i motion-effects.js oraz assets/ i licenses/. Nie spłaszczaj struktury folderów. Weryfikacja tego pakietu dotyczy lokalnego podglądu; publiczne wdrożenie wymaga aktualizacji repozytorium połączonego z Vercel.
+
+## Integracja grafik i animacje
+
+Główne grafiki AI są pokazywane w całości, łącznie z napisami i elementami plakatów, jako ograniczone rozmiarem materiały ofertowe w grafitowej oprawie. Bez masek, rozmycia, wycinania i filtrów. Każdy plakat można powiększyć. Hero zawiera jeden nagłówek i indeks usług. W quadach plakatowi towarzyszy większa prawdziwa fotografia i dwa zdjęcia dodatkowe; pod kompozycją znajduje się rząd konkretnych informacji. Paintball oraz modele mają ciemne tła, a galeria paintballa pokazuje cztery prawdziwe zdjęcia w równych proporcjach. Zdjęcia Izy i Róży Max nadal pokazują całe konstrukcje. Zachowano dane klienta oraz pakiet trzech atrakcji.
+
+Subtelne wejścia sekcji, zdjęć modeli i galerii korzystają z lokalnego pakietu Motion 14 mini (motion-effects.js, około 9,3 KB). Bez Reacta, CDN i instalowania zależności na Vercel. Ustawienie ograniczonego ruchu wyłącza animacje. Treść pozostaje widoczna także bez JavaScriptu. Licencje Motion, Motion DOM i Motion Utils znajdują się w licenses/.
+
+Po tej zmianie sprawdzono układ przy 320, 390, 768, 1024 i 1440 px, otwieranie i zamykanie galerii oraz zmianę modelu. Ponownie sprawdzono lokalne odwołania i kotwice. Publikacja publiczna nie została wykonana w tej aktualizacji.

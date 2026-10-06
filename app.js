@@ -7,18 +7,20 @@ navigation.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){closeMenu();menu.focus();}});
 window.matchMedia('(min-width: 761px)').addEventListener('change',closeMenu);
 const galleries={
- models:[['assets/model-jacek-1280.webp','Model Jacek — przykładowa realizacja'],['assets/model-roza-1280.webp','Model Róża — przykładowa realizacja'],['assets/model-iza-1280.webp','Model Iza — przykładowa realizacja']],
- quads:[['assets/quady-las-960.webp','Quady na leśnej trasie'],['assets/quady-trasa-960.webp','Rodzinna wyprawa w teren'],['assets/quady-rodzina-960.webp','Wspólny czas przy quadach'],['assets/hero-1280.webp','Przejażdżki w okolicach Szówska']],
- paintball:[['assets/paintball-dzieci-1280.webp','Mobilna strzelnica na festynie'],['assets/paintball-celnosc-960.webp','Ćwiczenie celności przy stanowisku'],['assets/paintball-marker-960.webp','Strzelanie do celów'],['assets/paintball-impreza-960.webp','Strzelnica podczas imprezy plenerowej'],['assets/paintball-grupa-960.webp','Uczestnicy przy mobilnej strzelnicy'],['assets/paintball-stanowiska-960.webp','Stanowiska przygotowane do strzelania']]
+ offers:[['assets/oferta-place-zabaw-1280.webp','Place zabaw dla dzieci — grafika ofertowa'],['assets/oferta-quady-1280.webp','Rodzinne przejażdżki quadami — grafika ofertowa'],['assets/oferta-paintball-1280.webp','Mobilna strzelnica paintball — grafika ofertowa']],
+ models:[['assets/model-jacek-1280.webp','Model Jacek — przykładowa realizacja'],['assets/model-roza-1280.webp','Model Róża — przykładowa realizacja'],['assets/model-iza-1280.webp','Model Iza — przykładowa realizacja'],['assets/model-roza-max-1280.webp','Model Róża Max — przykładowa realizacja']],
+ quads:[['assets/quady-las-960.webp','Quady na leśnej trasie'],['assets/quady-trasa-960.webp','Rodzinna wyprawa w teren'],['assets/quady-rodzina-960.webp','Wspólny czas przy quadach'],['assets/hero-1280.webp','Przejażdżki w okolicach Szówska'],['assets/oferta-quady-1280.webp','Rodzinne przejażdżki quadami — grafika ofertowa']],
+ paintball:[['assets/paintball-dzieci-1280.webp','Mobilna strzelnica na festynie'],['assets/paintball-celnosc-960.webp','Ćwiczenie celności przy stanowisku'],['assets/paintball-marker-960.webp','Strzelanie do celów'],['assets/paintball-impreza-960.webp','Strzelnica podczas imprezy plenerowej'],['assets/paintball-grupa-960.webp','Uczestnicy przy mobilnej strzelnicy'],['assets/paintball-stanowiska-960.webp','Stanowiska przygotowane do strzelania'],['assets/oferta-paintball-1280.webp','Mobilna strzelnica paintball — grafika ofertowa']]
 };
-const names={jacek:0,roza:1,iza:2};
+const names={jacek:0,roza:1,iza:2,'roza-max':3};
+const modelLabels={jacek:'Jacek',roza:'Róża',iza:'Iza','roza-max':'Róża Max'};
 document.querySelectorAll('.model-button').forEach(button=>button.addEventListener('click',()=>{
   const selected=button.closest('.model');
   document.querySelectorAll('.model').forEach(model=>{const active=model===selected;model.classList.toggle('active',active);model.querySelector('button').setAttribute('aria-expanded',String(active));model.querySelector('.model-details').hidden=!active;model.querySelector('.model-sign').textContent=active?'−':'+';});
   const name=selected.dataset.model,index=names[name],image=document.querySelector('#model-image');
   image.src=galleries.models[index][0];image.srcset=`assets/model-${name}-640.webp 640w, assets/model-${name}-1280.webp 1280w`;image.alt=galleries.models[index][1];
   document.querySelector('#model-caption').textContent=galleries.models[index][1];
-  const photo=document.querySelector('.model-photo button');photo.dataset.photo=String(index);photo.setAttribute('aria-label',`Powiększ zdjęcie modelu ${name==='roza'?'Róża':name==='iza'?'Iza':'Jacek'}`);
+  const photo=document.querySelector('.model-photo button');photo.dataset.photo=String(index);photo.setAttribute('aria-label',`Powiększ zdjęcie modelu ${modelLabels[name]}`);
 }));
 const dialog=document.querySelector('.lightbox');let gallery=[],photoIndex=0,opener=null;
 function showPhoto(){const item=gallery[photoIndex];const image=dialog.querySelector('.lightbox-image');image.src=item[0];image.alt=item[1];dialog.querySelector('.lightbox-caption').textContent=item[1];dialog.querySelector('.lightbox-counter').textContent=`${photoIndex+1} / ${gallery.length}`;}

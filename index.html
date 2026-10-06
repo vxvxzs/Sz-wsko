@@ -2,60 +2,92 @@
 <html lang="pl">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Place zabaw, rodzinne quady i paintball — Jarosław / Szówsko</title>
-  <meta name="description" content="Drewniane place zabaw od producenta, rodzinne przejażdżki quadami w okolicach Jarosławia i Szówska oraz mobilna strzelnica paintball w całej Polsce. Telefon: 886 179 875.">
+  <title>Place zabaw, rodzinne przejażdżki quadami i paintball — Szówsko</title>
+  <meta name="description" content="Drewniane place zabaw od producenta, rodzinne przejażdżki quadami w Szówsku, Radawie i okolicach Jarosławia oraz mobilna strzelnica paintball w całej Polsce. Telefon: 886 179 875.">
   <meta name="theme-color" content="#20221e">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/anton-0.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="anton-font.css"><link rel="stylesheet" href="manrope-font.css"><link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="anton-font.css"><link rel="stylesheet" href="manrope-font.css"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="art-integration.css">
+  <script src="app.js" defer></script><script src="motion-effects.js" defer></script>
 </head>
 <body>
   <a href="#main" class="skip-link">Przejdź do treści</a>
   <header class="header">
     <a class="wordmark" href="#start" aria-label="Szówsko — strona główna"><span>SZÓWSKO<span class="gold">.</span></span><small>PLACE ZABAW / QUADY / PAINTBALL</small></a>
     <nav aria-label="Główna nawigacja" id="navigation"><a href="#place-zabaw">Place zabaw</a><a href="#quady">Quady</a><a href="#paintball">Paintball</a><a href="#kontakt">Kontakt</a></nav>
-    <a class="header-phone" href="tel:+48886179875">886 179 875</a>
+    <div class="header-contact"><a class="header-phone" href="tel:+48886179875">tel. 886 179 875</a><a class="header-email" href="mailto:jacor_jto@interia.pl">jacor_jto@interia.pl</a></div>
     <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" aria-label="Otwórz menu">Menu <span aria-hidden="true">☰</span></button>
   </header>
   <main id="main">
     <section class="hero wrap" id="start" aria-labelledby="hero-title">
-      <div class="hero-copy"><p class="eyebrow">JAROSŁAW / SZÓWSKO</p><h1 id="hero-title">DOBRY DZIEŃ<br>ZACZYNA SIĘ<br><span class="gold">NA DWORZE.</span></h1><p class="hero-description">Miejsce do zabawy w ogrodzie. Wspólna wyprawa quadami. Pierwsze trafienie do tarczy. Wybierzcie coś dla siebie.</p><a class="button gold-button" href="#oferta">Zobacz ofertę</a><a class="hero-contact" href="tel:+48886179875">Porozmawiajmy: 886 179 875</a></div>
-      <figure class="hero-photo"><img src="assets/hero-1280.webp" srcset="assets/hero-640.webp 640w, assets/hero-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 55vw" width="1280" height="960" fetchpriority="high" alt="Rodzinna przejażdżka na dwóch quadach na zielonej polanie"><figcaption>Rodzinne przejażdżki w okolicach Szówska</figcaption><span class="photo-note" aria-hidden="true">W TEREN,<br>RAZEM.</span></figure>
+      <div class="hero-copy">
+        <p class="eyebrow">JAROSŁAW / SZÓWSKO</p>
+        <h1 id="hero-title">Atrakcje dla<br>całej rodziny.</h1>
+        <nav class="hero-offers" id="oferta" aria-label="Nasza oferta">
+          <a href="#place-zabaw"><span>01</span>Place zabaw dla dzieci<span aria-hidden="true">↗</span></a>
+          <a href="#quady"><span>02</span>Rodzinne przejażdżki quadami<span aria-hidden="true">↗</span></a>
+          <a href="#paintball"><span>03</span>Mobilna strzelnica paintball<span aria-hidden="true">↗</span></a>
+        </nav>
+        <p class="hero-description">Do ogrodu, w teren i na rodzinne imprezy.</p>
+        <div class="hero-actions"><a class="button gold-button" href="#place-zabaw">Zobacz ofertę</a><a class="hero-contact" href="tel:+48886179875">tel. 886 179 875</a></div>
+      </div>
+      <figure class="hero-photo integrated-art poster-frame">
+        <div class="artwork-label"><span>PLACE ZABAW</span><span>OFERTA / 01</span></div>
+        <button class="photo-button" data-gallery="offers" data-photo="0" aria-label="Powiększ plakat oferty placów zabaw">
+          <span class="art-window art-playground"><img src="assets/oferta-place-zabaw-1280.webp" srcset="assets/oferta-place-zabaw-640.webp 640w, assets/oferta-place-zabaw-1280.webp 1280w" sizes="(max-width:760px) 280px, 320px" width="1054" height="1492" fetchpriority="high" alt="Pełna grafika ofertowa klienta — place zabaw dla dzieci"></span><span class="zoom-label">Powiększ +</span>
+        </button>
+        <figcaption>Place zabaw do Twojego ogrodu</figcaption>
+      </figure>
     </section>
-    <div class="offer-index wrap" id="oferta" aria-label="Nasza oferta"><a href="#place-zabaw"><span>01</span><strong>Place zabaw</strong><small>Do Twojego ogrodu</small></a><a href="#quady"><span>02</span><strong>Rodzinne quady</strong><small>Jarosław / Szówsko</small></a><a href="#paintball"><span>03</span><strong>Mobilny paintball</strong><small>Dojazd w całej Polsce</small></a></div>
     <section class="playgrounds light-section" id="place-zabaw" aria-labelledby="play-title"><div class="wrap">
-      <div class="section-heading"><div><p class="eyebrow">01 / ZABAWA NA CO DZIEŃ</p><h2 id="play-title">WŁASNY KAWAŁEK<br><span class="muted-heading">DZIECIĘCEGO ŚWIATA.</span></h2></div><p>Drewniane place zabaw prosto od producenta. Wybierz model, a kolorystykę, dodatki i układ dopasujemy do Twojego ogrodu.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">01 / ZABAWA NA CO DZIEŃ</p><h2 id="play-title">Place zabaw<br><span class="muted-heading">dla dzieci</span></h2></div><p>Drewniane place zabaw prosto od producenta. Wybierz model, a kolorystykę, dodatki i układ dopasujemy do Twojego ogrodu.</p></div>
       <div class="model-layout">
         <div class="models" aria-label="Modele placów zabaw">
           <article class="model active" data-model="jacek"><button class="model-button" aria-expanded="true" aria-controls="jacek-details"><span>MODEL</span><strong>Jacek</strong><span class="model-sign" aria-hidden="true">−</span></button><div id="jacek-details" class="model-details"><p>Wieża z daszkiem, zjeżdżalnia, huśtawka i ścianka wspinaczkowa. Dużo możliwości zabawy w jednym zestawie.</p><a href="tel:+48886179875">Zapytaj o model Jacek</a></div></article>
           <article class="model" data-model="roza"><button class="model-button" aria-expanded="false" aria-controls="roza-details"><span>MODEL</span><strong>Róża</strong><span class="model-sign" aria-hidden="true">+</span></button><div id="roza-details" class="model-details" hidden><p>Domek z okienkami, zjeżdżalnia i strefa huśtawek. Zestaw możesz rozbudować o zamykaną piaskownicę z ławeczkami oraz belkę na 3 huśtawki.</p><a href="tel:+48886179875">Zapytaj o model Róża</a></div></article>
           <article class="model" data-model="iza"><button class="model-button" aria-expanded="false" aria-controls="iza-details"><span>MODEL</span><strong>Iza</strong><span class="model-sign" aria-hidden="true">+</span></button><div id="iza-details" class="model-details" hidden><p>Otwarta wieża ze zjeżdżalnią, bocianie gniazdo i ścianka wspinaczkowa. Prosty układ, który łatwo dopasować do ogrodu.</p><a href="tel:+48886179875">Zapytaj o model Iza</a></div></article>
+          <article class="model" data-model="roza-max"><button class="model-button" aria-expanded="false" aria-controls="roza-max-details"><span>MODEL</span><strong>Róża Max</strong><span class="model-sign" aria-hidden="true">+</span></button><div id="roza-max-details" class="model-details" hidden><p>Osobny model w ofercie. Zobacz całą konstrukcję na zdjęciu i zapytaj o szczegóły zestawu.</p><a href="tel:+48886179875">Zapytaj o model Róża Max</a></div></article>
         </div>
         <figure class="model-photo"><button class="photo-button" data-gallery="models" data-photo="0" aria-label="Powiększ zdjęcie modelu Jacek"><img id="model-image" src="assets/model-jacek-1280.webp" srcset="assets/model-jacek-640.webp 640w, assets/model-jacek-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 60vw" width="1280" height="960" loading="lazy" alt="Model Jacek: drewniana wieża ze zjeżdżalnią, huśtawką i ścianką wspinaczkową"><span class="zoom-label">Powiększ zdjęcie +</span></button><figcaption id="model-caption">Model Jacek / przykładowa realizacja</figcaption></figure>
       </div>
       <div class="playground-bottom"><p>Transport i montaż ustalamy indywidualnie, zależnie od lokalizacji.</p><p>Kolory, układ i akcesoria? <a href="tel:+48886179875">Ustalmy je przez telefon.</a></p></div>
-      <noscript><p>Pozostałe modele: <a href="assets/model-roza-1280.webp">Róża — domek; opcjonalnie piaskownica z ławeczkami i belka na 3 huśtawki</a> oraz <a href="assets/model-iza-1280.webp">Iza — wieża, zjeżdżalnia i bocianie gniazdo</a>.</p></noscript>
+      <noscript><p>Pozostałe modele: <a href="assets/model-roza-1280.webp">Róża — domek; opcjonalnie piaskownica z ławeczkami i belka na 3 huśtawki</a> oraz <a href="assets/model-iza-1280.webp">Iza — wieża, zjeżdżalnia i bocianie gniazdo</a>. Nowy model: <a href="assets/model-roza-max-1280.webp">Róża Max</a>.</p></noscript>
     </div></section>
     <section class="quads wrap" id="quady" aria-labelledby="quads-title">
-      <div class="quads-top"><div><p class="eyebrow">02 / RODZINNE PRZEJAŻDŻKI</p><h2 id="quads-title">MNIEJ EKRANÓW.<br><span class="gold">WIĘCEJ TERENU.</span></h2></div><div class="quads-intro"><p>Wsiądźcie na quady i ruszcie razem na trasę. Jeździmy w okolicach Jarosławia i Szówska, tempem dopasowanym do uczestników.</p><a class="text-link" href="tel:+48886179875">Zapytaj o wolny termin</a></div></div>
-      <div class="quad-mosaic"><figure class="quad-large"><button class="photo-button" data-gallery="quads" data-photo="0" aria-label="Powiększ zdjęcie quadów w lesie"><img src="assets/quady-las-960.webp" width="960" height="720" loading="lazy" alt="Dwa quady na leśnej trasie"><span class="zoom-label">Powiększ +</span></button><figcaption>Leśne ścieżki i trasy dobrane do rodzin</figcaption></figure><div class="quad-side"><figure><button class="photo-button" data-gallery="quads" data-photo="1" aria-label="Powiększ zdjęcie rodzinnej wyprawy"><img src="assets/quady-trasa-960.webp" width="960" height="540" loading="lazy" alt="Uczestnicy w kaskach podczas przejażdżki quadami o zachodzie słońca"><span class="zoom-label">Powiększ +</span></button></figure><ul class="plain-list"><li>Quady dwuosobowe</li><li>Kaski i szkolenie przed startem</li><li>Trasy dopasowane do rodzin</li></ul></div></div>
-      <div class="family-strip"><button class="photo-button" data-gallery="quads" data-photo="2" aria-label="Powiększ zdjęcie rodziny przy quadzie"><img src="assets/quady-rodzina-960.webp" width="960" height="720" loading="lazy" alt="Rodzina przy quadzie na polanie"></button><p>Dzieci jadą jako pasażerowie. Dobór trasy i warunki udziału ustalimy przed przyjazdem.</p></div>
+      <div class="quads-top"><div><p class="eyebrow">02 / RODZINNE PRZEJAŻDŻKI</p><h2 id="quads-title">Rodzinne przejażdżki<br><span class="gold">quadami</span></h2></div><div class="quads-intro"><p>Szówsko, Radawa i okolice Jarosławia. Trasy i tempo dopasowujemy do uczestników.</p><a class="text-link" href="tel:+48886179875">Zapytaj o wolny termin</a></div></div>
+      <div class="quad-mosaic quad-composition">
+        <figure class="quad-large integrated-art poster-frame">
+          <div class="artwork-label"><span>QUADY</span><span>OFERTA / 02</span></div>
+          <button class="photo-button" data-gallery="quads" data-photo="4" aria-label="Powiększ grafikę oferty rodzinnych przejażdżek quadami"><span class="art-window art-quads"><img src="assets/oferta-quady-1280.webp" srcset="assets/oferta-quady-640.webp 640w, assets/oferta-quady-1280.webp 1280w" sizes="(max-width:760px) 280px, 320px" width="1054" height="1492" loading="lazy" alt="Pełny plakat klienta — rodzinne przejażdżki quadami"></span><span class="zoom-label">Powiększ +</span></button>
+          <figcaption>Rodzinne przejażdżki quadami / oferta</figcaption>
+        </figure>
+        <div class="quad-documentary">
+          <figure class="quad-primary"><button class="photo-button" data-gallery="quads" data-photo="3" aria-label="Powiększ zdjęcie quadów w Szówsku"><img src="assets/hero-1280.webp" srcset="assets/hero-640.webp 640w, assets/hero-1280.webp 1280w" sizes="(max-width:760px) 100vw, 660px" width="1280" height="960" loading="lazy" alt="Dwa quady i uczestnicy przejażdżki na polanie w Szówsku"><span class="zoom-label">Powiększ +</span></button><figcaption>Szówsko / przed wyjazdem w teren</figcaption></figure>
+          <div class="quad-secondary">
+            <figure><button class="photo-button" data-gallery="quads" data-photo="1" aria-label="Powiększ zdjęcie rodzinnej wyprawy"><img src="assets/quady-trasa-960.webp" width="960" height="540" loading="lazy" alt="Uczestnicy w kaskach podczas rodzinnej przejażdżki w terenie"><span class="zoom-label">Powiększ +</span></button></figure>
+            <figure><button class="photo-button" data-gallery="quads" data-photo="2" aria-label="Powiększ zdjęcie rodziny przy quadzie"><img src="assets/quady-rodzina-960.webp" width="960" height="720" loading="lazy" alt="Rodzina przy quadzie na polanie"><span class="zoom-label">Powiększ +</span></button></figure>
+          </div>
+        </div>
+      </div>
+      <ul class="plain-list quad-facts"><li>Quady dwuosobowe</li><li>Kaski i szkolenie przed startem</li><li>Trasy dopasowane do rodzin</li></ul>
+      <p class="quad-participation">Dzieci jadą jako pasażerowie. Dobór trasy i warunki udziału ustalimy przed przyjazdem.</p>
     </section>
-    <section class="family-package" aria-labelledby="family-title"><div class="wrap family-inner"><div><p class="eyebrow">POMYSŁ NA WSPÓLNY DZIEŃ</p><h2 id="family-title">JEDEN WYJAZD.<br>TRZY DOBRE POWODY.</h2></div><div class="family-content"><p>Rodzinny pakiet łączy przejażdżkę quadami, strzelanie do tarcz i ognisko z kiełbaskami. Organizacją zajmiemy się my.</p><p class="package-line">QUADY <span>+</span> PAINTBALL <span>+</span> OGNISKO</p><a class="button dark-button" href="tel:+48886179875">Zapytaj o pakiet rodzinny</a></div></div></section>
-    <section class="paintball light-section" id="paintball" aria-labelledby="paintball-title"><div class="wrap">
-      <div class="paint-heading"><div><p class="eyebrow">03 / MOBILNA STRZELNICA PAINTBALL</p><h2 id="paintball-title">SPRAWDŹCIE,<br>KTO MA <span class="muted-heading">CELNE OKO.</span></h2></div><p>Strzelamy do tarcz statycznych i ruchomych. Strzelnicę przywozimy na festyny, pikniki i imprezy rodzinne w całej Polsce.</p></div>
-      <div class="paint-layout"><figure class="paint-main"><button class="photo-button" data-gallery="paintball" data-photo="0" aria-label="Powiększ zdjęcie strzelnicy na festynie"><img src="assets/paintball-dzieci-1280.webp" srcset="assets/paintball-dzieci-640.webp 640w, assets/paintball-dzieci-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 65vw" width="1280" height="960" loading="lazy" alt="Dziecko ćwiczące celność przy stanowisku mobilnej strzelnicy na festynie"><span class="zoom-label">Powiększ zdjęcie +</span></button><figcaption>Nasza strzelnica podczas imprezy plenerowej</figcaption></figure><div class="paint-info"><span class="age-mark">5+<small>OD 5. ROKU ŻYCIA</small></span><h3>Sprzęt i instruktaż<br>są na miejscu.</h3><p>Zapewniamy sprzęt, szkolenie i pomoc przy stanowisku. Młodsi i starsi mogą spróbować swoich sił w strzelaniu do celów.</p><a class="text-link" href="tel:+48886179875">Zamów strzelnicę na imprezę</a></div></div>
-      <div class="paint-gallery" aria-label="Zdjęcia mobilnej strzelnicy">
+    <section class="family-package" aria-labelledby="family-title"><div class="wrap family-inner"><div><p class="eyebrow">PAKIET TRZECH ATRAKCJI</p><h2 id="family-title">JEDEN WYJAZD.<br>TRZY ATRAKCJE.</h2></div><div class="family-content"><p>Rodzinny pakiet łączy przejażdżkę quadami, strzelanie do tarcz i ognisko z kiełbaskami. Organizacją zajmiemy się my.</p><p class="package-line">Quady <span>•</span> Strzelnica <span>•</span> Ognisko</p><a class="button dark-button" href="tel:+48886179875">Zapytaj o pakiet rodzinny</a></div></div></section>
+    <section class="paintball dark-section" id="paintball" aria-labelledby="paintball-title"><div class="wrap">
+      <div class="paint-heading"><div><p class="eyebrow">03 / MOBILNA STRZELNICA</p><h2 id="paintball-title">Mobilna strzelnica<br><span class="muted-heading">paintball</span></h2></div><p>Mobilna strzelnica paintballowa do tarcz statycznych. Dojeżdżamy na festyny, pikniki i imprezy rodzinne w całej Polsce.</p></div>
+      <div class="paint-layout"><figure class="paint-main integrated-art poster-frame"><div class="artwork-label"><span>PAINTBALL</span><span>OFERTA / 03</span></div><button class="photo-button" data-gallery="paintball" data-photo="6" aria-label="Powiększ grafikę mobilnej strzelnicy paintball"><span class="art-window art-paintball"><img src="assets/oferta-paintball-1280.webp" srcset="assets/oferta-paintball-640.webp 640w, assets/oferta-paintball-1280.webp 1280w" sizes="(max-width:760px) 260px, 300px" width="933" height="1686" loading="lazy" alt="Pełny plakat klienta — mobilna strzelnica paintball"></span><span class="zoom-label">Powiększ +</span></button><figcaption>Mobilna strzelnica paintball / oferta</figcaption></figure><div class="paint-info"><span class="age-mark">5+<small>OD 5. ROKU ŻYCIA</small></span><h3>Sprzęt i instruktaż<br>na miejscu.</h3><p>Zapewniamy sprzęt, szkolenie i pomoc przy stanowisku. Młodsi i starsi mogą spróbować swoich sił w strzelaniu do celów.</p><a class="text-link" href="tel:+48886179875">Zamów strzelnicę na imprezę</a></div></div>
+      <div class="paint-gallery" aria-label="Zdjęcia mobilnej strzelnicy"><button class="photo-button" data-gallery="paintball" data-photo="0" aria-label="Powiększ zdjęcie strzelnicy na festynie"><img src="assets/paintball-dzieci-1280.webp" srcset="assets/paintball-dzieci-640.webp 640w, assets/paintball-dzieci-1280.webp 1280w" sizes="(max-width: 760px) 50vw, 300px" width="2048" height="1152" loading="lazy" alt="Dziecko przy stanowisku mobilnej strzelnicy na festynie"><span class="zoom-label">Powiększ +</span></button>
         <button class="photo-button" data-gallery="paintball" data-photo="1" aria-label="Powiększ zdjęcie ćwiczenia celności"><img src="assets/paintball-celnosc-960.webp" width="960" height="720" loading="lazy" alt="Młody uczestnik celujący z markera paintballowego"><span class="zoom-label">Powiększ +</span></button>
         <button class="photo-button" data-gallery="paintball" data-photo="2" aria-label="Powiększ zdjęcie stanowiska"><img src="assets/paintball-marker-960.webp" width="960" height="720" loading="lazy" alt="Uczestnik przy stoliku z markerem paintballowym"><span class="zoom-label">Powiększ +</span></button>
         <button class="photo-button" data-gallery="paintball" data-photo="3" aria-label="Powiększ zdjęcie imprezy plenerowej"><img src="assets/paintball-impreza-960.webp" width="960" height="540" loading="lazy" alt="Uczestnicy imprezy przy mobilnej strzelnicy na świeżym powietrzu"><span class="zoom-label">Powiększ +</span></button>
-      </div><div class="paint-footer"><p>Festyn, urodziny czy piknik? Ustalimy dojazd i organizację strzelnicy.</p><button class="gallery-link" data-gallery="paintball" data-photo="4">Zobacz więcej zdjęć (6)</button></div>
+      </div><div class="paint-footer"><p>Festyn, urodziny czy piknik? Ustalimy dojazd i organizację strzelnicy.</p><button class="gallery-link" data-gallery="paintball" data-photo="4">Zobacz całą galerię</button></div>
     </div></section>
-    <section class="contact wrap" id="kontakt" aria-labelledby="contact-title"><div><p class="eyebrow">KONTAKT / JACEK</p><h2 id="contact-title">MASZ POMYSŁ?<br><span class="gold">ZADZWOŃ.</span></h2><p>Dobierzemy plac zabaw, umówimy przejażdżkę<br>albo ustalimy strzelnicę na Twoją imprezę.</p></div><div class="contact-right"><a class="big-phone" href="tel:+48886179875">886 179 875</a><p>Jarosław / Szówsko</p><p class="contact-note">Mobilna strzelnica — dojazd na terenie całej Polski.<br>Ceny i dostępność ustalamy indywidualnie.</p></div></section>
+    <section class="contact wrap" id="kontakt" aria-labelledby="contact-title"><div><p class="eyebrow">KONTAKT / JACEK</p><h2 id="contact-title">MASZ POMYSŁ?<br><span class="gold">ZADZWOŃ.</span></h2><p>Dobierzemy plac zabaw, umówimy przejażdżkę<br>albo ustalimy strzelnicę na Twoją imprezę.</p></div><div class="contact-right"><a class="big-phone" href="tel:+48886179875"><span class="phone-prefix">tel.</span> 886 179 875</a><a class="contact-email" href="mailto:jacor_jto@interia.pl">jacor_jto@interia.pl</a><p>Jarosław / Szówsko</p><p class="contact-note">Mobilna strzelnica — dojazd na terenie całej Polski.<br>Ceny i dostępność ustalamy indywidualnie.</p></div></section>
   </main>
-  <footer class="footer wrap"><p>PLACE ZABAW / RODZINNE QUADY / MOBILNY PAINTBALL</p><a href="#start">Wróć na górę</a><small>© <span id="year">2026</span> Szówsko</small></footer>
-  <a class="mobile-call" href="tel:+48886179875">Zadzwoń <span>886 179 875</span></a>
+  <footer class="footer wrap"><p>PLACE ZABAW / RODZINNE PRZEJAŻDŻKI / MOBILNA STRZELNICA PAINTBALL</p><a href="#start">Wróć na górę</a><small>© <span id="year">2026</span> Szówsko</small></footer>
+  <a class="mobile-call" href="tel:+48886179875">Zadzwoń <span>tel. 886 179 875</span></a>
   <dialog class="lightbox" aria-label="Galeria zdjęć"><div class="lightbox-toolbar"><p class="lightbox-counter" aria-live="polite"></p><button class="lightbox-close" aria-label="Zamknij galerię">Zamknij ×</button></div><div class="lightbox-stage"><button class="lightbox-prev" aria-label="Poprzednie zdjęcie">‹</button><figure><img class="lightbox-image" src="assets/hero-1280.webp" alt=""><figcaption class="lightbox-caption" aria-live="polite"></figcaption></figure><button class="lightbox-next" aria-label="Następne zdjęcie">›</button></div></dialog>
 </body>
 </html>
+
+

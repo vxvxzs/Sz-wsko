@@ -1,0 +1,33 @@
+'use strict';
+const menu = document.querySelector('.menu-toggle');
+const navigation = document.querySelector('#navigation');
+function closeMenu(){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Otwórz menu');navigation.classList.remove('open');}
+menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Zamknij menu':'Otwórz menu');navigation.classList.toggle('open',open);});
+navigation.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){closeMenu();menu.focus();}});
+window.matchMedia('(min-width: 761px)').addEventListener('change',closeMenu);
+const galleries={
+ models:[['assets/model-jacek-1280.webp','Model Jacek — przykładowa realizacja'],['assets/model-roza-1280.webp','Model Róża — przykładowa realizacja'],['assets/model-iza-1280.webp','Model Iza — przykładowa realizacja']],
+ quads:[['assets/quady-las-960.webp','Quady na leśnej trasie'],['assets/quady-trasa-960.webp','Rodzinna wyprawa w teren'],['assets/quady-rodzina-960.webp','Wspólny czas przy quadach'],['assets/hero-1280.webp','Przejażdżki w okolicach Szówska']],
+ paintball:[['assets/paintball-dzieci-1280.webp','Mobilna strzelnica na festynie'],['assets/paintball-celnosc-960.webp','Ćwiczenie celności przy stanowisku'],['assets/paintball-marker-960.webp','Strzelanie do celów'],['assets/paintball-impreza-960.webp','Strzelnica podczas imprezy plenerowej'],['assets/paintball-grupa-960.webp','Uczestnicy przy mobilnej strzelnicy'],['assets/paintball-stanowiska-960.webp','Stanowiska przygotowane do strzelania']]
+};
+const names={jacek:0,roza:1,iza:2};
+document.querySelectorAll('.model-button').forEach(button=>button.addEventListener('click',()=>{
+  const selected=button.closest('.model');
+  document.querySelectorAll('.model').forEach(model=>{const active=model===selected;model.classList.toggle('active',active);model.querySelector('button').setAttribute('aria-expanded',String(active));model.querySelector('.model-details').hidden=!active;model.querySelector('.model-sign').textContent=active?'−':'+';});
+  const name=selected.dataset.model,index=names[name],image=document.querySelector('#model-image');
+  image.src=galleries.models[index][0];image.srcset=`assets/model-${name}-640.webp 640w, assets/model-${name}-1280.webp 1280w`;image.alt=galleries.models[index][1];
+  document.querySelector('#model-caption').textContent=galleries.models[index][1];
+  const photo=document.querySelector('.model-photo button');photo.dataset.photo=String(index);photo.setAttribute('aria-label',`Powiększ zdjęcie modelu ${name==='roza'?'Róża':name==='iza'?'Iza':'Jacek'}`);
+}));
+const dialog=document.querySelector('.lightbox');let gallery=[],photoIndex=0,opener=null;
+function showPhoto(){const item=gallery[photoIndex];const image=dialog.querySelector('.lightbox-image');image.src=item[0];image.alt=item[1];dialog.querySelector('.lightbox-caption').textContent=item[1];dialog.querySelector('.lightbox-counter').textContent=`${photoIndex+1} / ${gallery.length}`;}
+document.querySelectorAll('[data-gallery]').forEach(button=>button.addEventListener('click',()=>{opener=button;gallery=galleries[button.dataset.gallery];photoIndex=Number(button.dataset.photo);showPhoto();dialog.showModal();document.body.classList.add('modal-open');dialog.querySelector('.lightbox-close').focus();}));
+function stepPhoto(step){photoIndex=(photoIndex+step+gallery.length)%gallery.length;showPhoto();}
+dialog.querySelector('.lightbox-prev').addEventListener('click',()=>stepPhoto(-1));
+dialog.querySelector('.lightbox-next').addEventListener('click',()=>stepPhoto(1));
+dialog.querySelector('.lightbox-close').addEventListener('click',()=>dialog.close());
+dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
+dialog.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();stepPhoto(-1);}if(e.key==='ArrowRight'){e.preventDefault();stepPhoto(1);}});
+dialog.addEventListener('close',()=>{document.body.classList.remove('modal-open');opener?.focus();});
+document.querySelector('#year').textContent=String(new Date().getFullYear());

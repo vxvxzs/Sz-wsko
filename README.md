@@ -58,10 +58,12 @@ Po tej zmianie sprawdzono układ przy 320, 390, 768, 1024 i 1440 px, otwieranie 
 
 ## Zdjęcia i poprawki — 8 października 2026
 
-- Róża ma nowe zdjęcie wskazane przez klienta. Nazwy wszystkich czterech modeli są widoczne na zdjęciu oraz w powiększeniu. Konstrukcje pozostają pokazywane w całości.
+- Róża ma nowe zdjęcie wskazane przez klienta. Nazwy wszystkich czterech modeli są widoczne w osobnym pasku nad fotografią oraz w powiększeniu, bez zasłaniania konstrukcji. Konstrukcje pozostają pokazywane w całości.
 - Usunięto ze strony i galerii wskazane zdjęcie pary na quadach. Dodano fotografię nad rzeką oraz oryginalne zdjęcia transportu, instruktażu i przejazdu przez łąkę, bez interfejsu Messengera. Galeria quadów zawiera siedem fotografii i plakat.
 - Opis quadów uwzględnia wybór trasy oraz umówienie dojazdu quadów pod dom.
 - Na desktopie prawdziwe zdjęcia strzelnicy są obok pełnego plakatu. Na telefonie kompozycja przechodzi w jedną kolumnę. W sekcji jest pięć fotografii, w tym śmigłowiec i grupa uczestników.
 - Galeria strzelnicy udostępnia 27 rzeczywistych zdjęć i plakat. Dodatkowe zdjęcia w powiększeniu wczytują się dopiero przy oglądaniu; nie dodano 27 dużych fotografii do głównego układu strony. Nowe materiały zoptymalizowano do WebP.
 
 Kontrola tej aktualizacji: brak poziomego przewijania przy 320, 390, 768, 1024 i 1440 px; działające menu mobilne, przełączanie modeli, powiększenia, zmiana zdjęcia i Escape. Obejrzano nową Różę, Różę Max, quady, desktopową kompozycję strzelnicy oraz mobilne powiększenie śmigłowca. Konsola nie zgłosiła błędów. To lokalna aktualizacja; publiczne wdrożenie wymaga wgrania paczki do repozytorium Vercel.
+
+Dodatkowa kontrola podpisów: wszystkie cztery modele na stronie oraz w powiększeniu przy 320×568, 390×844, 768×1024, 844×390 i 1440×900 px (40 przypadków). Podpisy nie nachodzą na zdjęcia, zdjęcia mają object-fit: contain, brak poziomego przewijania. Sprawdzono zgodność nazwy po przejściu strzałką przez całą galerię modeli oraz ukrycie podpisu modelu w galerii quadów.

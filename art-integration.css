@@ -66,7 +66,8 @@ h2{font-size:60px;line-height:1.12;max-width:650px}.muted-heading{color:inherit}
 @media(prefers-reduced-motion:reduce){.button:hover{transform:none}}
 
 /* Client photo updates: 8 October 2026. */
-.model-photo-name,.lightbox-model-name{position:absolute;z-index:1;top:16px;left:16px;padding:8px 13px;background:#1b1e18ed;border-left:3px solid var(--gold);color:var(--light);font-family:var(--display);font-size:23px;line-height:1.2;letter-spacing:.01em;pointer-events:none}
+.model-photo-name,.lightbox-model-name{display:block;position:static;padding:8px 13px;background:#1b1e18;border-left:3px solid var(--gold);color:var(--light);font-family:var(--display);font-size:23px;line-height:1.2;letter-spacing:.01em;pointer-events:none;text-align:left}
+.lightbox-model-name:not([hidden]) + .lightbox-image{max-height:calc(100dvh - 240px)}
 .lightbox-stage figure{position:relative}.lightbox-model-name[hidden]{display:none}
 .quad-secondary img{object-fit:contain;background:#141711;aspect-ratio:1.7}
 .documentary-footer{display:flex;align-items:center;justify-content:space-between;gap:12px 22px;flex-wrap:wrap;margin-top:20px;padding-top:15px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
@@ -84,7 +85,7 @@ h2{font-size:60px;line-height:1.12;max-width:650px}.muted-heading{color:inherit}
 @media(min-width:761px) and (max-width:1200px){.paint-composition{gap:30px 40px}}
 @media(min-width:761px) and (max-width:950px){.paint-composition{gap:26px 30px}.paint-composition .paint-info{grid-template-columns:56px minmax(0,1fr);gap:15px}.paint-composition .age-mark{font-size:50px}.paint-composition .paint-info h3{font-size:20px}.paint-documentary .paint-gallery{gap:12px}}
 @media(max-width:760px){
- .model-photo-name,.lightbox-model-name{font-size:19px;top:10px;left:10px;padding:7px 10px}
+ .model-photo-name,.lightbox-model-name{font-size:19px;padding:7px 10px}
  .paint-composition{display:flex;flex-direction:column;gap:30px;padding:0}
  .paint-composition .paint-main{margin:0 auto}
  .paint-documentary{width:100%}

@@ -7,8 +7,8 @@
   <meta name="theme-color" content="#20221e">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/anton-0.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="anton-font.css"><link rel="stylesheet" href="manrope-font.css"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="art-integration.css">
-  <script src="app.js" defer></script><script src="motion-effects.js" defer></script>
+  <link rel="stylesheet" href="anton-font.css"><link rel="stylesheet" href="manrope-font.css"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="art-integration.css?v=20261008-hero-large">
+  <script src="app.js?v=20261008-hero" defer></script><script src="motion-effects.js?v=20261008-hero" defer></script>
 </head>
 <body>
   <a href="#main" class="skip-link">Przejdź do treści</a>
@@ -31,24 +31,31 @@
         <p class="hero-description">Do ogrodu, w teren i na rodzinne imprezy.</p>
         <div class="hero-actions"><a class="button gold-button" href="#place-zabaw">Zobacz ofertę</a><a class="hero-contact" href="tel:+48886179875">tel. 886 179 875</a></div>
       </div>
-      <div class="hero-showcase" aria-label="Grafiki ofertowe">
-      <figure class="hero-photo integrated-art poster-frame">
+      <div class="hero-showcase" role="region" aria-label="Grafiki trzech ofert">
+      <div class="hero-slides">
+      <figure class="hero-slide hero-photo integrated-art" id="hero-offer-0">
         <div class="artwork-label"><span>PLACE ZABAW</span><span>OFERTA / 01</span></div>
         <button class="photo-button" data-gallery="offers" data-photo="0" aria-label="Powiększ plakat oferty placów zabaw">
-          <span class="art-window art-playground"><img src="assets/oferta-place-zabaw-1280.webp" srcset="assets/oferta-place-zabaw-640.webp 640w, assets/oferta-place-zabaw-1280.webp 1280w" sizes="(max-width:760px) 280px, 320px" width="1054" height="1492" fetchpriority="high" alt="Pełna grafika ofertowa klienta — place zabaw dla dzieci"></span><span class="zoom-label">Powiększ +</span>
+          <span class="art-window art-playground"><img src="assets/oferta-place-zabaw-1280.webp" srcset="assets/oferta-place-zabaw-640.webp 640w, assets/oferta-place-zabaw-1280.webp 1280w" sizes="(max-width:760px) 80vw, 340px" width="1054" height="1492" fetchpriority="high" alt="Pełna grafika ofertowa klienta — place zabaw dla dzieci"></span><span class="zoom-label">Powiększ +</span>
         </button>
         <figcaption>Place zabaw do Twojego ogrodu</figcaption>
       </figure>
-      <figure class="hero-extra integrated-art poster-frame">
+      <figure class="hero-slide integrated-art" id="hero-offer-1" hidden>
         <div class="artwork-label"><span>QUADY</span><span>OFERTA / 02</span></div>
         <button class="photo-button" data-gallery="offers" data-photo="1" aria-label="Powiększ plakat quadów na początku strony"><span class="art-window art-quads"><img src="assets/oferta-quady-640.webp" width="1054" height="1492" alt="Rodzinne przejażdżki quadami — plakat klienta"></span><span class="zoom-label">Powiększ +</span></button>
         <figcaption>Rodzinne przejażdżki quadami</figcaption>
       </figure>
-      <figure class="hero-extra integrated-art poster-frame">
+      <figure class="hero-slide integrated-art" id="hero-offer-2" hidden>
         <div class="artwork-label"><span>PAINTBALL</span><span>OFERTA / 03</span></div>
         <button class="photo-button" data-gallery="offers" data-photo="2" aria-label="Powiększ plakat strzelnicy na początku strony"><span class="art-window art-paintball"><img src="assets/oferta-paintball-640.webp" width="933" height="1686" alt="Mobilna strzelnica paintball — plakat klienta"></span><span class="zoom-label">Powiększ +</span></button>
         <figcaption>Mobilna strzelnica paintball</figcaption>
       </figure>
+      </div>
+      <div class="hero-switcher" aria-label="Wybierz plakat oferty" hidden>
+        <button type="button" data-hero-slide="0" aria-controls="hero-offer-0" aria-pressed="true"><span>01</span>Place zabaw</button>
+        <button type="button" data-hero-slide="1" aria-controls="hero-offer-1" aria-pressed="false"><span>02</span>Quady</button>
+        <button type="button" data-hero-slide="2" aria-controls="hero-offer-2" aria-pressed="false"><span>03</span>Paintball</button>
+      </div>
       </div>
     </section>
     <section class="playgrounds light-section" id="place-zabaw" aria-labelledby="play-title"><div class="wrap">

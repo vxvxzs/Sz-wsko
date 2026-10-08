@@ -65,6 +65,18 @@ h2{font-size:60px;line-height:1.12;max-width:650px}.muted-heading{color:inherit}
 }
 @media(prefers-reduced-motion:reduce){.button:hover{transform:none}}
 
+/* Three complete offer posters in the opening section. */
+.hero-showcase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:center;min-width:0;width:100%}
+.hero-showcase .hero-photo.integrated-art{grid-row:auto;max-width:none;margin:0;padding:12px}
+.hero-showcase .hero-extra{padding:12px;max-width:none;width:100%;justify-self:end}
+.hero-showcase .artwork-label{font-size:9px;padding-bottom:12px;gap:6px}
+.hero-showcase .artwork-label span:last-child{display:none}
+.hero-showcase .integrated-art .photo-button{max-width:none}
+.hero-showcase .integrated-art figcaption{font-size:10px;padding-top:10px}
+@media(min-width:761px){.hero{gap:42px;grid-template-columns:1fr 1.1fr}.hero-showcase .hero-photo.integrated-art{align-self:center}}
+@media(min-width:761px) and (max-width:950px){.hero{gap:26px}.hero-showcase{gap:12px}.hero-showcase .hero-photo.integrated-art,.hero-showcase .hero-extra{padding:10px}.hero-showcase .artwork-label{font-size:8px}}
+@media(max-width:760px){.hero-showcase{grid-template-columns:1fr 1fr;gap:16px;max-width:500px;align-self:center}.hero-showcase .hero-photo.integrated-art{grid-row:auto;grid-column:1/-1;max-width:350px;justify-self:center;padding:17px 22px 16px}.hero-showcase .hero-extra{max-width:none;align-self:start;justify-self:stretch;padding:12px}.hero-showcase .artwork-label{font-size:9px}.hero-showcase .hero-extra .zoom-label{font-size:9px;right:5px;bottom:5px}}
+
 /* Client photo updates: 8 October 2026. */
 .model-photo-name,.lightbox-model-name{display:block;position:static;padding:8px 13px;background:#1b1e18;border-left:3px solid var(--gold);color:var(--light);font-family:var(--display);font-size:23px;line-height:1.2;letter-spacing:.01em;pointer-events:none;text-align:left}
 .lightbox-model-name:not([hidden]) + .lightbox-image{max-height:calc(100dvh - 240px)}

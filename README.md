@@ -55,3 +55,13 @@ Główne grafiki AI są pokazywane w całości, łącznie z napisami i elementam
 Subtelne wejścia sekcji, zdjęć modeli i galerii korzystają z lokalnego pakietu Motion 14 mini (motion-effects.js, około 9,3 KB). Bez Reacta, CDN i instalowania zależności na Vercel. Ustawienie ograniczonego ruchu wyłącza animacje. Treść pozostaje widoczna także bez JavaScriptu. Licencje Motion, Motion DOM i Motion Utils znajdują się w licenses/.
 
 Po tej zmianie sprawdzono układ przy 320, 390, 768, 1024 i 1440 px, otwieranie i zamykanie galerii oraz zmianę modelu. Ponownie sprawdzono lokalne odwołania i kotwice. Publikacja publiczna nie została wykonana w tej aktualizacji.
+
+## Zdjęcia i poprawki — 8 października 2026
+
+- Róża ma nowe zdjęcie wskazane przez klienta. Nazwy wszystkich czterech modeli są widoczne na zdjęciu oraz w powiększeniu. Konstrukcje pozostają pokazywane w całości.
+- Usunięto ze strony i galerii wskazane zdjęcie pary na quadach. Dodano fotografię nad rzeką oraz oryginalne zdjęcia transportu, instruktażu i przejazdu przez łąkę, bez interfejsu Messengera. Galeria quadów zawiera siedem fotografii i plakat.
+- Opis quadów uwzględnia wybór trasy oraz umówienie dojazdu quadów pod dom.
+- Na desktopie prawdziwe zdjęcia strzelnicy są obok pełnego plakatu. Na telefonie kompozycja przechodzi w jedną kolumnę. W sekcji jest pięć fotografii, w tym śmigłowiec i grupa uczestników.
+- Galeria strzelnicy udostępnia 27 rzeczywistych zdjęć i plakat. Dodatkowe zdjęcia w powiększeniu wczytują się dopiero przy oglądaniu; nie dodano 27 dużych fotografii do głównego układu strony. Nowe materiały zoptymalizowano do WebP.
+
+Kontrola tej aktualizacji: brak poziomego przewijania przy 320, 390, 768, 1024 i 1440 px; działające menu mobilne, przełączanie modeli, powiększenia, zmiana zdjęcia i Escape. Obejrzano nową Różę, Różę Max, quady, desktopową kompozycję strzelnicy oraz mobilne powiększenie śmigłowca. Konsola nie zgłosiła błędów. To lokalna aktualizacja; publiczne wdrożenie wymaga wgrania paczki do repozytorium Vercel.

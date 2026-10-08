@@ -65,3 +65,31 @@ h2{font-size:60px;line-height:1.12;max-width:650px}.muted-heading{color:inherit}
 }
 @media(prefers-reduced-motion:reduce){.button:hover{transform:none}}
 
+/* Client photo updates: 8 October 2026. */
+.model-photo-name,.lightbox-model-name{position:absolute;z-index:1;top:16px;left:16px;padding:8px 13px;background:#1b1e18ed;border-left:3px solid var(--gold);color:var(--light);font-family:var(--display);font-size:23px;line-height:1.2;letter-spacing:.01em;pointer-events:none}
+.lightbox-stage figure{position:relative}.lightbox-model-name[hidden]{display:none}
+.quad-secondary img{object-fit:contain;background:#141711;aspect-ratio:1.7}
+.documentary-footer{display:flex;align-items:center;justify-content:space-between;gap:12px 22px;flex-wrap:wrap;margin-top:20px;padding-top:15px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+.documentary-footer .gallery-link{white-space:normal;text-align:left;min-height:44px;padding:0;margin:0;color:var(--light)}
+.paint-composition{grid-template-areas:'poster photos' 'details photos';grid-template-rows:auto 1fr;gap:32px 64px;align-items:start}
+.paint-composition .paint-main{grid-area:poster;margin:0}
+.paint-documentary{grid-area:photos;min-width:0}
+.paint-primary img{aspect-ratio:4/3;object-fit:cover;object-position:center}
+.paint-primary figcaption{font-size:11px;color:var(--muted);margin-top:10px}
+.paint-documentary .paint-gallery{grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.paint-documentary .paint-gallery .photo-contain img{object-fit:contain;background:#141711}
+.paint-composition .paint-info{grid-area:details;display:grid;grid-template-columns:70px minmax(0,1fr);gap:20px;max-width:420px;padding:26px 0 0;margin:0;align-self:start}
+.paint-composition .age-mark{font-size:60px;margin:0;grid-row:auto;grid-column:1}.paint-composition .age-mark small{font-size:9px}
+.paint-composition .paint-info>div{grid-column:2;min-width:0}.paint-composition .paint-info h3{font-size:22px;margin:0 0 14px}.paint-composition .paint-info p{font-size:14px}.paint-composition .paint-info .text-link{font-size:12px;margin-top:16px}
+@media(min-width:761px) and (max-width:1200px){.paint-composition{gap:30px 40px}}
+@media(min-width:761px) and (max-width:950px){.paint-composition{gap:26px 30px}.paint-composition .paint-info{grid-template-columns:56px minmax(0,1fr);gap:15px}.paint-composition .age-mark{font-size:50px}.paint-composition .paint-info h3{font-size:20px}.paint-documentary .paint-gallery{gap:12px}}
+@media(max-width:760px){
+ .model-photo-name,.lightbox-model-name{font-size:19px;top:10px;left:10px;padding:7px 10px}
+ .paint-composition{display:flex;flex-direction:column;gap:30px;padding:0}
+ .paint-composition .paint-main{margin:0 auto}
+ .paint-documentary{width:100%}
+ .paint-documentary .paint-gallery{grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+ .paint-composition .paint-info{width:100%;max-width:none;grid-template-columns:65px minmax(0,1fr);gap:20px;padding-top:25px;margin:0}
+ .paint-composition .paint-info h3{font-size:21px}.paint-composition .paint-info .text-link{margin-top:14px}
+ .documentary-footer{font-size:11px;margin-top:18px;padding-top:12px}.documentary-footer .gallery-link{font-size:12px}
+}

@@ -34,3 +34,22 @@ dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoun
 dialog.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();stepPhoto(-1);}if(e.key==='ArrowRight'){e.preventDefault();stepPhoto(1);}});
 dialog.addEventListener('close',()=>{document.body.classList.remove('modal-open');opener?.focus();});
 document.querySelector('#year').textContent=String(new Date().getFullYear());
+
+// Manual offer viewer: stable dimensions, no timer and no automatic movement.
+const heroSlides=[...document.querySelectorAll('.hero-slide')];
+const heroChoices=[...document.querySelectorAll('[data-hero-slide]')];
+const heroSwitcher=document.querySelector('.hero-switcher');
+if(heroSwitcher && heroSlides.length){
+  heroSwitcher.hidden=false;
+  let activeOffer=0;
+  heroChoices.forEach(choice=>choice.addEventListener('click',()=>{
+    const index=Number(choice.dataset.heroSlide);
+    if(index===activeOffer)return;
+    activeOffer=index;
+    heroSlides.forEach((slide,i)=>{slide.hidden=i!==index;slide.classList.remove('is-entering');});
+    heroChoices.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));
+    const slide=heroSlides[index],image=slide.querySelector('img');
+    const enter=()=>{if(activeOffer===index)slide.classList.add('is-entering');};
+    if(image.complete)enter();else image.addEventListener('load',enter,{once:true});
+  }));
+}
